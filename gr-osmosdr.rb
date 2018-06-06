@@ -10,7 +10,7 @@ class GrOsmosdr < Formula
 
   depends_on "cmake" => :build
   depends_on "gnuradio"
-  depends_on :"python@2"
+  depends_on "python@2"
 
   resource "Markdown" do
     url "https://pypi.python.org/packages/source/M/Markdown/Markdown-2.4.tar.gz"
@@ -28,7 +28,7 @@ class GrOsmosdr < Formula
 
     ["Markdown", "Cheetah"].each do |r|
       resource(r).stage do
-        system "python@2", *Language::Python.setup_install_args(libexec/"vendor")
+        system "python", *Language::Python.setup_install_args(libexec/"vendor")
       end
     end
 
@@ -40,6 +40,6 @@ class GrOsmosdr < Formula
   end
 
   test do
-    system "python@2", "-c", "import osmosdr"
+    system "python", "-c", "import osmosdr"
   end
 end
