@@ -80,8 +80,7 @@ class Gnuradio < Formula
     end
 
     args << "-DENABLE_DEFAULT=OFF"
-    args << "-DENABLE_INTERNAL_VOLK=ON"
-    enabled_components = %w[gr-analog gr-fft volk gr-filter gnuradio-runtime
+    enabled_components = %w[gr-analog gr-fft gr-filter gnuradio-runtime
                             gr-blocks testing gr-pager gr-noaa gr-channels
                             gr-audio gr-fcd gr-vocoder gr-fec gr-digital
                             gr-dtv gr-atsc gr-trellis gr-zeromq gr-utils python]
