@@ -10,7 +10,7 @@ class GrOsmosdr < Formula
 
   depends_on "cmake" => :build
   depends_on "gnuradio"
-  depends_on :python@2
+  depends_on :"python@2"
 
   resource "Markdown" do
     url "https://pypi.python.org/packages/source/M/Markdown/Markdown-2.4.tar.gz"
