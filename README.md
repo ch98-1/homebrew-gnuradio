@@ -1,4 +1,4 @@
 [Gnuradio](http://gnuradio.org/) with `gnuradio-companion` (unlike in homebrew
 core) and `wxgui`.
 
-    brew tap kolen/homebrew-gnuradio
+    brew tap ch98-1/homebrew-gnuradio
