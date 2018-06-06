@@ -1,24 +1,11 @@
 class Gnuradio < Formula
   desc "SDK providing the signal processing runtime and processing blocks"
   homepage "http://gnuradio.org/"
-  url "http://gnuradio.org/releases/gnuradio/gnuradio-3.7.10.1.tar.gz"
+  url "https://github.com/gnuradio/gnuradio/archive/v3.7.13.2.tar.gz"
   sha256 "63d7b65cc4abe22f47b8f41caaf7370a0a502b91e36e29901ba03e8838ab4937"
   head "https://github.com/gnuradio/gnuradio.git"
   revision 6
-
-  bottle do
-    rebuild 1
-    sha256 "2cbc22df1411ef7090bd43cbec10dbb23ee16439ed8bb0e10a2b144455237e51" => :sierra
-    sha256 "187f22d812f4ba86af2d2f64e9473647b49aa2373d6688d7ecfb840374285749" => :el_capitan
-    sha256 "41eb9fdae72761b7a83f284f1e7613da9e3ce916e0f98f20ad3aafe417be5a4e" => :yosemite
-  end
-
-  # Fixes linkage of python (swig) bindings directly to python
-  # https://github.com/gnuradio/gnuradio/pull/1146
-  patch do
-    url "https://github.com/gnuradio/gnuradio/pull/1146.patch"
-    sha256 "385b62cc46ff07696f7ff4ff89bbb4891909947027f9712be040937d477f6d81"
-  end
+  
 
   option :universal
   option "with-documentation", "Build with documentation"
